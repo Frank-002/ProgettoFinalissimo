@@ -1,0 +1,8 @@
+.custom-dropdown-toggle::after {
+    display: none !important;
+}
+.custom-dropdown-menu {
+    right: 0 !important;
+    left: auto !important;
+    direction: rtl; /* Imposta la direzione da destra a sinistra */
+}

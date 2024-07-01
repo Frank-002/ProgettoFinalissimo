@@ -1,0 +1,19 @@
+/* Stili personalizzati per la tabella e le righe */
+.custom-table {
+    border: 1px solid #dee2e6; /* Colore del bordo esterno della tabella */
+    border-radius: 8px; /* Angoli arrotondati per la tabella */
+    overflow: hidden; /* Assicura che le righe non fuoriescano dai bordi arrotondati */
+    border-collapse: collapse; /* Assicura che i bordi della tabella siano uniti */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-table th,
+.custom-table td {
+    border: 1px solid #dee2e6; /* Bordo per le celle della tabella */
+    padding: 8px; /* Spaziatura interna delle celle */
+}
+
+.custom-thead {
+    background-color: #007bff; /* Colore di sfondo per l'intestazione */
+    color: white; /* Colore del testo per l'intestazione */
+}

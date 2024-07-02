@@ -19,7 +19,7 @@ const postSchema = new mongoose.Schema(
     image: {
       type: String,
       default:
-        "https://contenthub-static.grammarly.com/blog/wp-content/uploads/2017/11/how-to-write-a-blog-post.jpeg",
+        "https://www.salepepe.it/files/2017/06/scritta-di-sale-Too-much-salt.jpg",
     },
 
     category: {

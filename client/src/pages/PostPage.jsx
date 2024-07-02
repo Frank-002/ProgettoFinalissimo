@@ -81,23 +81,24 @@ export default function PostPage() {
             <Container className="py-3 min-vh-100">
                 <Row className="justify-content-center">
                     <Col md={8} lg={6}>
-                        <div className="mt-4 p-4 bg-light border rounded shadow-sm">
+                        <div
+                            className="mt-4 p-4 bg-light border rounded shadow-sm d-flex flex-column align-items-center">
                             <img
                                 src={post.image}
                                 alt={post.title}
                                 className="img-fluid rounded mb-4"
-                                style={{ maxHeight: '400px', objectFit: 'cover' }}
+                                style={{maxHeight: '400px', maxWidth: '100%', objectFit: 'cover'}}
                             />
                             <div className="d-flex justify-content-between w-100 mt-3 border-bottom pb-2">
                                 <span>{new Date(post.createdAt).toLocaleDateString()}</span>
                                 <span className="fst-italic">
-                  {(post.content.length / 1000).toFixed(0)} minuti letti
-                </span>
+            {(post.content.length / 1000).toFixed(0)} minuti letti
+        </span>
                             </div>
                             <div
                                 className="mt-4"
-                                dangerouslySetInnerHTML={{ __html: post.content }}
-                                style={{ maxWidth: '100%', width: '100%' }}
+                                dangerouslySetInnerHTML={{__html: post.content}}
+                                style={{maxWidth: '100%', width: '100%'}}
                             ></div>
                         </div>
 
@@ -112,7 +113,7 @@ export default function PostPage() {
                             {recentPosts &&
                                 recentPosts.map((recentPost) => (
                                     <Col key={recentPost._id} md={4} className="mb-3">
-                                        <PostCard post={recentPost} />
+                                        <PostCard post={recentPost}/>
                                     </Col>
                                 ))}
                         </Row>

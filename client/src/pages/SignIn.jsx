@@ -59,7 +59,7 @@ const SignIn = () => {
 
 
           <div className="row justify-content-center align-items-center mr-0">
-            <div className="col-md-6 ">
+            <div className="col-md-6 pl-6">
               <div className="card shadow">
                 <div className="card-body">
                   <Form className="d-flex flex-column gap-4" onSubmit={handleSubmit}>

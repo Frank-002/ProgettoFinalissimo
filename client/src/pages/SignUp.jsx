@@ -53,70 +53,68 @@ const SignUp = () => {
   console.log(formData);
 
   return (
-      <div className="min-vh-100 d-flex align-items-center">
-        <Container>
-          <div className="row">
-            <div className="jumbotron jumbotron-fluid text-white bg-dark">
-              <Container className="text-center">
-                <h1 className="display-3">Registrati</h1>
-                <p className="lead mb-2">
-                  Benvenuto! Registrati con la tua email e password per entrare nella community.
-                </p>
-              </Container>
-            </div>
-          </div>
+      <div>
+        <div className="jumbotron jumbotron-fluid text-white bg-dark">
+          <Container className="text-center">
+            <h1 className="display-3">Registrati</h1>
+            <p className="lead mb-2">
+              Benvenuto! Registrati con la tua email e password per entrare nella community.
+            </p>
+          </Container>
+        </div>
 
-          <div className="row justify-content-center align-items-center">
-            <div className="col-md-6">
-              <div className="card shadow">
-                <div className="card-body">
-                  <Form onSubmit={handleSubmit}>
-                    <Form.Group controlId="username" className="mb-3">
-                      <Form.Label>Il tuo username </Form.Label>
-                      <Form.Control type="text" placeholder="Username" onChange={handleChange} />
-                    </Form.Group>
 
-                    <Form.Group controlId="email" className="mb-3">
-                      <Form.Label>La tua email</Form.Label>
-                      <Form.Control type="email" placeholder="nome@email.com" onChange={handleChange} />
-                    </Form.Group>
+        <div className="row justify-content-center align-items-center">
+          <div className="col-md-6 pr-6 pl-6">
+            <div className="card shadow">
+              <div className="card-body">
+                <Form onSubmit={handleSubmit}>
+                  <Form.Group controlId="username" className="mb-3">
+                    <Form.Label>Il tuo username </Form.Label>
+                    <Form.Control type="text" placeholder="Username" onChange={handleChange}/>
+                  </Form.Group>
 
-                    <Form.Group controlId="password" className="mb-3">
-                      <Form.Label>La tua password</Form.Label>
-                      <Form.Control type="password" placeholder="Password" onChange={handleChange} />
-                    </Form.Group>
+                  <Form.Group controlId="email" className="mb-3">
+                    <Form.Label>La tua email</Form.Label>
+                    <Form.Control type="email" placeholder="nome@email.com" onChange={handleChange}/>
+                  </Form.Group>
 
-                    <Button variant="primary" type="submit" disabled={loading} className="w-100">
-                      {loading ? (
-                          <>
-                            <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" />
-                            <span className="pl-3">Loading...</span>
-                          </>
-                      ) : (
-                          'Registrati'
-                      )}
-                    </Button>
+                  <Form.Group controlId="password" className="mb-3">
+                    <Form.Label>La tua password</Form.Label>
+                    <Form.Control type="password" placeholder="Password" onChange={handleChange}/>
+                  </Form.Group>
 
-                    <div className="d-flex gap-2 text-sm mt-3">
-                      <span>Hai già un account?</span>
-                      <Link to="/sign-in" className="text-primary">
-                        Accedi
-                      </Link>
-                    </div>
-
-                    {errorMessage && (
-                        <Alert variant="danger" className="mt-3">
-                          {errorMessage}
-                        </Alert>
+                  <Button variant="primary" type="submit" disabled={loading} className="w-100">
+                    {loading ? (
+                        <>
+                          <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true"/>
+                          <span className="pl-3">Loading...</span>
+                        </>
+                    ) : (
+                        'Registrati'
                     )}
-                  </Form>
-                </div>
+                  </Button>
+
+                  <div className="d-flex gap-2 text-sm mt-3">
+                    <span>Hai già un account?</span>
+                    <Link to="/sign-in" className="text-primary">
+                      Accedi
+                    </Link>
+                  </div>
+
+                  {errorMessage && (
+                      <Alert variant="danger" className="mt-3">
+                        {errorMessage}
+                      </Alert>
+                  )}
+                </Form>
               </div>
-              <OAuth />
             </div>
+            <OAuth/>
           </div>
-        </Container>
+        </div>
       </div>
+
   );
 };
 

@@ -51,7 +51,7 @@ const CreatePost = () => {
           setImageUploadProgress(progress.toFixed(0));
         },
         (error) => {
-          setImageUploadError('Image upload failed');
+          setImageUploadError('Upload dell \'immagine fallita');
           setImageUploadProgress(null);
         },
         () => {
@@ -63,7 +63,7 @@ const CreatePost = () => {
         }
       );
     } catch (error) {
-      setImageUploadError('Image upload failed');
+      setImageUploadError('Upload dell \'immagine fallita');
       setImageUploadProgress(null);
       console.log(error);
     }
